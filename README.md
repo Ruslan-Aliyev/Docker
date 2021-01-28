@@ -132,3 +132,11 @@ IP address of boot2docker virtual machine Other platforms:
 - https://docs.docker.com/docker-for-mac/install/
 
 ![](/Illustrations/docker7.png)
+
+# Package Laravel Project in Docker
+
+- https://webomnizz.com/containerize-your-laravel-application-with-docker-compose/amp/
+
+- https://www.youtube.com/watch?v=PDaGJ397Ing
+
+[](/laravelapp)
