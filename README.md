@@ -133,10 +133,23 @@ IP address of boot2docker virtual machine Other platforms:
 
 ![](/Illustrations/docker7.png)
 
+----Actually the above Docker for Mac method is old. See below for the updated way----
+
+- https://docs.docker.com/docker-for-mac/install/
+	- You might need to get pass this permission problem: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
+
 # Package Laravel Project in Docker
 
 - https://webomnizz.com/containerize-your-laravel-application-with-docker-compose/amp/
-
 - https://www.youtube.com/watch?v=PDaGJ397Ing
+- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm
+
+# Package WP Project in Docker
+
+- https://upcloud.com/community/tutorials/wordpress-with-docker/
+- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose
+- https://docs.docker.com/compose/wordpress/
+- https://www.hostinger.vn/huong-dan/lam-the-nao-de-cai-wordpress-tren-docker/
+
 
 [](/laravelapp)
