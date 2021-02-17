@@ -161,7 +161,7 @@ The above way is essentially an Laravel project, which comes with it's server an
 
 [](/laravelapp)
 
-# Package WP Project in Docker
+# Install WP Project with Docker
 
 ## Official Tutorial
 
