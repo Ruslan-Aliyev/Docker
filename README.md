@@ -133,56 +133,9 @@ IP address of boot2docker virtual machine Other platforms:
 
 ![](/Illustrations/docker7.png)
 
-----Actually the above Docker for Mac method is old. See below for the updated way----
+## Update
+
+Actually the above Docker for Mac method is old. See below for the updated way----
 
 - https://docs.docker.com/docker-for-mac/install/
 	- You might need to get pass this permission problem: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
-
-# Package Laravel Project in Docker
-
-- https://webomnizz.com/containerize-your-laravel-application-with-docker-compose/amp/
-
-```
-git clone https://github.com/Ruslan-Aliyev/Docker.git
-cd Docker/laravelapp
-docker-compose up -d
-docker ps
-docker exec -it {container-id} bash
-cp .env.example .env
-composer install
-chmod -R 777 storage
-php artisan key:generate
-```
-
-The above way is essentially an Laravel project, which comes with it's server and DB. (So eg LAMP isn't needed)
-
-- https://www.youtube.com/watch?v=PDaGJ397Ing
-- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm
-
-[](/laravelapp)
-
-# Install WP Project with Docker
-
-## Official Tutorial
-
-- https://docs.docker.com/compose/wordpress/
-
-```
-mkdir wordpress
-cd wordpress
-touch docker-compose.yml
-docker-compose up -d
-```
-http://localhost:8000
-
-## Simplest Example
-
-- https://upcloud.com/community/tutorials/wordpress-with-docker/
-
-## Simple Example
-
-- https://www.hostinger.vn/huong-dan/lam-the-nao-de-cai-wordpress-tren-docker/
-
-## Complex Example
-
-- https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-docker-compose
