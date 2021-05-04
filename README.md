@@ -25,6 +25,7 @@
 
 - https://www.linode.com/docs/applications/containers/docker-commands-quick-reference- cheat-sheet/
 - https://github.com/wsargent/docker-cheat-sheet#instructions
+- https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
 
 # Fiddles:
 
@@ -36,17 +37,7 @@
 - https://github.com/nishanttotla/DockerStaticSite
 - https://semaphoreci.com/community/tutorials/dockerizing-a-php-application
 
-![](/Illustrations/docker1.png)
-
-![](/Illustrations/docker2.png)
-
-Docker only expose to kernel
-
-![](/Illustrations/docker3.png)
-
-The making of a Docker process
-
-![](/Illustrations/docker4.png)
+![](/Illustrations/docker.png)
 
 # Install :
 
@@ -139,3 +130,24 @@ Actually the above Docker for Mac method is old. See below for the updated way--
 
 - https://docs.docker.com/docker-for-mac/install/
 	- You might need to get pass this permission problem: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
+
+# Setup web server
+
+https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#setup-web-server-via-docker
+
+# Swarms
+
+1. https://www.youtube.com/watch?v=bU2NNFJ-UXA
+2. https://www.youtube.com/watch?v=3-7gZS4ePak
+
+- http://www.jadejaber.com/articles/hello-docker-with-swarm-mono-node/
+
+
+# Kubernetes
+
+- https://www.youtube.com/watch?v=7bA0gTroJjw
+- https://www.youtube.com/watch?v=X48VuDVv0do
+
+## Swarms vs Kubernetes
+- https://www.youtube.com/watch?v=9_s3h_GVzZc
+
