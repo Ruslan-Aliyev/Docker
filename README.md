@@ -11,6 +11,20 @@
 - https://www.youtube.com/watch?v=YFl2mCHdv24&list=PL_HVsP_TO8z7aey-lCMe64BIx3VEfvPdn
 - https://www.youtube.com/playlist?list=PLillGF-Rfqbb6vZqT-Lzi9Al_noaY5LAs
 - https://rominirani.com/docker-tutorial-series-a7e6ff90a
+- https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+- Dockerize Node: https://www.youtube.com/watch?v=gAkwW2tuIqE
+- Dockerize all-sorts: https://docs.docker.com/samples/
+- Dockerize Nginx: 
+	- https://codeburst.io/get-started-with-nginx-on-docker-907e5c0c9f3a 
+	- https://medium.com/myriatek/using-docker-to-run-a-simple-nginx-server-75a48d74500b 
+	- https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
+	- https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm
+	- https://www.geeksforgeeks.org/how-to-build-a-web-server-docker-file/ 
+- Root priviledge issue: 
+	- https://dzone.com/articles/docker-without-root-privileges * 
+	- https://www.redhat.com/en/blog/understanding-root-inside-and-outside-container *
+	- https://betterprogramming.pub/running-a-container-with-a-non-root-user-e35830d1f42a 
+	- https://medium.com/@mccode/processes-in-containers-should-not-run-as-root-2feae3f0df3b
 
 # Official Sites:
 
@@ -36,6 +50,8 @@
 - https://writing.pupius.co.uk/apache-and-php-on-docker-44faef
 - https://github.com/nishanttotla/DockerStaticSite
 - https://semaphoreci.com/community/tutorials/dockerizing-a-php-application
+
+# Architecture:
 
 ![](/Illustrations/docker.png)
 
@@ -141,13 +157,33 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 2. https://www.youtube.com/watch?v=3-7gZS4ePak
 
 - http://www.jadejaber.com/articles/hello-docker-with-swarm-mono-node/
+- https://www.sumologic.com/glossary/docker-swarm/
+- https://vsupalov.com/difference-docker-compose-and-docker-stack/
+- https://stackoverflow.com/questions/44500394/docker-swarms-and-stacks-whats-the-difference#:~:text=Docker%20swarm%20is%20a%20Clustering,scheduling%20containers%20across%20multiple%20nodes.&text=Docker%20stack%20is%20a%20collection,is%20yaml%20(yml%20also)
+- https://docs.docker.com/engine/swarm/
+- https://github.com/swarmstack/swarmstack
+- https://betterprogramming.pub/how-to-differentiate-between-docker-images-containers-stacks-machine-nodes-and-swarms-fd5f7e34eb9f
+- https://www.youtube.com/watch?v=Tm0Q5zr3FL4
+- https://www.youtube.com/watch?v=74p7csxKN8M
+- https://www.youtube.com/watch?v=Yq-SQTESTJE
 
+## Load Balancing
+
+- https://www.quora.com/How-do-I-run-a-website-on-multiple-servers
+- https://serverfault.com/questions/774512/how-to-host-a-single-website-on-multiple-servers
+
+- https://www.youtube.com/watch?v=K0Ta65OqQkY
+- https://www.youtube.com/watch?v=R39VRocQtrQ
+- https://www.youtube.com/watch?v=pdBHsA2FG48
+- https://upcloud.com/community/tutorials/load-balancing-docker-swarm-mode/
 
 # Kubernetes
 
 - https://www.youtube.com/watch?v=7bA0gTroJjw
 - https://www.youtube.com/watch?v=X48VuDVv0do
+- https://www.tutorialspoint.com/kubernetes/index.htm
 
 ## Swarms vs Kubernetes
 - https://www.youtube.com/watch?v=9_s3h_GVzZc
+
 
