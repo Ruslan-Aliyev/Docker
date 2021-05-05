@@ -12,7 +12,6 @@
 - https://www.youtube.com/playlist?list=PLillGF-Rfqbb6vZqT-Lzi9Al_noaY5LAs
 - https://rominirani.com/docker-tutorial-series-a7e6ff90a
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-- Dockerize Node: https://www.youtube.com/watch?v=gAkwW2tuIqE
 - Dockerize all-sorts: https://docs.docker.com/samples/
 - Dockerize Nginx: 
 	- https://codeburst.io/get-started-with-nginx-on-docker-907e5c0c9f3a 
@@ -20,26 +19,35 @@
 	- https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
 	- https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm
 	- https://www.geeksforgeeks.org/how-to-build-a-web-server-docker-file/ 
+	- https://github.com/learncodeacademy/docker-static-nginx
+	- https://www.youtube.com/watch?v=K6WER0oI-qs&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
 - Root priviledge issue: 
 	- https://dzone.com/articles/docker-without-root-privileges * 
 	- https://www.redhat.com/en/blog/understanding-root-inside-and-outside-container *
 	- https://betterprogramming.pub/running-a-container-with-a-non-root-user-e35830d1f42a 
 	- https://medium.com/@mccode/processes-in-containers-should-not-run-as-root-2feae3f0df3b
+	- https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
 
 # Official Sites:
 
 - https://get.docker.com/
 - https://docs.docker.com/
 
-# Repository:
-
-- https://hub.docker.com/
-
 # Cheatsheets:
 
 - https://www.linode.com/docs/applications/containers/docker-commands-quick-reference- cheat-sheet/
 - https://github.com/wsargent/docker-cheat-sheet#instructions
 - https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+
+# Repository:
+
+- https://hub.docker.com/
+
+## Dockerhub
+
+![](/Illustrations/dockerhub.png)
+
+- https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
 
 # Fiddles:
 
@@ -55,7 +63,7 @@
 
 ![](/Illustrations/docker.png)
 
-# Install :
+# Install:
 
 Check Ubuntu version first: `lsb_release -a`
 
@@ -65,16 +73,21 @@ Check Ubuntu version first: `lsb_release -a`
 	- https://docs.docker.com/compose/install/
 
 OR:
-
 ```
 sudo yum -y update sudo
 yum install -y docker
 ```
+
 OR:
 ```
 sudo apt-get update sudo
 apt-get install docker.io
 ```
+
+OR for MAC:
+- https://docs.docker.com/docker-for-mac/install/
+	- You might need to get pass this permission problem: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
+
 Now docker commands are available to you.
 ```
 sudo service docker start
@@ -82,76 +95,19 @@ docker info
 
 sudo groupadd docker sudo gpasswd -a $USER docker sudo usermod -a -G docker
 
-$USER sudo service docker restart 
+${user} sudo service docker restart 
 # OR reboot physically
 ```
-https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user
 
-# Play around :
+---
 
-Take “Docker serve html static site”
-```
-docker build -t atabegruslan/static-nginx.
-docker run -d -p 8088:80 --name name_16 atabegruslan/static-nginx
-```
-Port 80 is exposed into the docker daemon.
-Port 8088 is exposed to out to the world.
-
-See: http://localhost:
-```
-docker ps      # see containers docker inspect d2e982dd6182|grep
-"IPAddress"    # get IP Address
-
-docker images  # see images docker tag 9d320f8b
-atabegruslan/static-nginx:firsttry
-
-docker login
-docker push atabegruslan/static-nginx
-```
-
-![](/Illustrations/docker5.png)
-
-![](/Illustrations/docker6.png)
-
-# Dockerhub:
-
-https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
-
-# For MAC
-
-(http://boot2docker.io/, http://macappstore.org/boot2docker/)
-https://www.docker.com/products/docker-desktop
-
-after install boot2docker:
-
-```
-boot2docker up
-$(boot2docker shellinit) # exec the output of boot2docker
-shellinit then u can run docker commands boot2docker ip //get
-```
-
-IP address of boot2docker virtual machine Other platforms:
-
-- https://docs.docker.com/install/#supported-platforms
-- https://docs.docker.com/docker-for-mac/install/
-- https://store.docker.com/editions/community/docker-ce-desktopmac
-- https://docs.docker.com/docker-for-windows/install/
-- https://docs.docker.com/docker-for-mac/install/
-
-![](/Illustrations/docker7.png)
-
-## Update
-
-Actually the above Docker for Mac method is old. See below for the updated way----
-
-- https://docs.docker.com/docker-for-mac/install/
-	- You might need to get pass this permission problem: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
-
-# Setup web server
+# Setup web server:
 
 https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#setup-web-server-via-docker
 
-# Swarms
+---
+
+# Swarms:
 
 1. https://www.youtube.com/watch?v=bU2NNFJ-UXA
 2. https://www.youtube.com/watch?v=3-7gZS4ePak
@@ -177,7 +133,7 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 - https://www.youtube.com/watch?v=pdBHsA2FG48
 - https://upcloud.com/community/tutorials/load-balancing-docker-swarm-mode/
 
-# Kubernetes
+# Kubernetes:
 
 - https://www.youtube.com/watch?v=7bA0gTroJjw
 - https://www.youtube.com/watch?v=X48VuDVv0do

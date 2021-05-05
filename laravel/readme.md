@@ -6,7 +6,7 @@
 ```
 git clone https://github.com/Ruslan-Aliyev/Docker.git
 cd Docker/laravel
-docker-compose up -d
+docker-compose up -d --build
 docker exec -it laraapp bash
 cp .env.example .env
 composer install
