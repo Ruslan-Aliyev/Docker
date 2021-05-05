@@ -1,14 +1,14 @@
 
 # Dockerize NodeJS App
 
-https://www.youtube.com/watch?v=Se-IUjRQe2c
-
-https://www.youtube.com/watch?v=gAkwW2tuIqE
+- https://www.youtube.com/watch?v=Se-IUjRQe2c
+- https://www.youtube.com/watch?v=gAkwW2tuIqE
+- https://www.bogotobogo.com/DevOps/Docker/Docker-Compose-Node-MongoDB.php
+- https://github.com/bradtraversy/docker-node-mongo
 
 ```
-docker build -t atabegruslan/node-test:1.0 .
-docker run -d -p 5000:8080 -v ${PWD}:/app/ --name example_name atabegruslan/node-test:1.0
-docker exec -it example_name bash
+docker-compose up -d --build
+docker exec -it nodejs bash
 ```
 
 http://localhost:5000/

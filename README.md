@@ -19,8 +19,6 @@
 	- https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
 	- https://www.tutorialspoint.com/docker/building_web_server_docker_file.htm
 	- https://www.geeksforgeeks.org/how-to-build-a-web-server-docker-file/ 
-	- https://github.com/learncodeacademy/docker-static-nginx
-	- https://www.youtube.com/watch?v=K6WER0oI-qs&list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
 - Root priviledge issue: 
 	- https://dzone.com/articles/docker-without-root-privileges * 
 	- https://www.redhat.com/en/blog/understanding-root-inside-and-outside-container *
