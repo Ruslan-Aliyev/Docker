@@ -1,6 +1,7 @@
 # Tutorials
 
 - https://youtube.com/playlist?list=PLCakfctNSHkGYdA82WDUKF3WGyONpGiEw
+- /DockerSlides.pdf
 - LearnCode.academy https://www.youtube.com/playlist?list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
 - Automation Step by Step - Raghav Pal https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK
 - Noureddin Sadawi
@@ -36,6 +37,8 @@
 - https://www.linode.com/docs/applications/containers/docker-commands-quick-reference- cheat-sheet/
 - https://github.com/wsargent/docker-cheat-sheet#instructions
 - https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+- /docker_cheatsheet_1.pdf
+- /docker_cheatsheet_2.pdf
 
 # Repository:
 
@@ -132,6 +135,8 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 - https://upcloud.com/community/tutorials/load-balancing-docker-swarm-mode/
 
 # Kubernetes:
+
+![](/Illustrations/k8.png)
 
 - https://www.youtube.com/watch?v=7bA0gTroJjw
 - https://www.youtube.com/watch?v=X48VuDVv0do
