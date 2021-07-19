@@ -18,3 +18,10 @@ php artisan key:generate
 
 - https://www.youtube.com/watch?v=PDaGJ397Ing
 - https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm
+
+# Sail
+
+- https://www.youtube.com/watch?v=5VxLX3aVs-E
+- https://www.youtube.com/watch?v=4K4nkncZ2OQ
+- https://laravel.com/docs/8.x/sail#installing-sail-into-existing-applications
+- https://laravel.com/docs/8.x/installation#getting-started-on-macos
