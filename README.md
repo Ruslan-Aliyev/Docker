@@ -1,6 +1,8 @@
 # Tutorials
 
 - https://youtube.com/playlist?list=PLCakfctNSHkGYdA82WDUKF3WGyONpGiEw
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC
+- https://www.youtube.com/playlist?list=PL16WqdAj66SBSLZ2-TrZ5q_39UhtKyL9U
 - /DockerSlides.pdf
 - LearnCode.academy https://www.youtube.com/playlist?list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
 - Automation Step by Step - Raghav Pal https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK
