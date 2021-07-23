@@ -18,6 +18,9 @@ php artisan key:generate
 
 - https://www.youtube.com/watch?v=PDaGJ397Ing
 - https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm
+- LaraDock: 
+	- https://www.youtube.com/playlist?list=PLWvvi-jFYHUjfMprLCYA1ubflsirxKrVg
+	- https://github.com/LaraDock/
 
 # Sail
 

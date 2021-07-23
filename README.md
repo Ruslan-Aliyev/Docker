@@ -10,9 +10,8 @@
 	- https://www.youtube.com/playlist?list=PLifxsivI_0Sq9Q7_tNPsYcratDh5sq34 
 	- http://wiki.zenoss.org/download/core/drich_slides/DockerSlides.pdf
 - Krammark23: https://www.youtube.com/watch?v=T25Z4CUwYjE
-- Traversy Media https://www.youtube.com/playlist?list=PLillGF-Rfqbb6vZqTLzi9Al_noaY5LAs
+- Traversy Media: https://www.youtube.com/playlist?list=PLillGF-Rfqbb6vZqT-Lzi9Al_noaY5LAs
 - https://www.youtube.com/watch?v=YFl2mCHdv24&list=PL_HVsP_TO8z7aey-lCMe64BIx3VEfvPdn
-- https://www.youtube.com/playlist?list=PLillGF-Rfqbb6vZqT-Lzi9Al_noaY5LAs
 - https://rominirani.com/docker-tutorial-series-a7e6ff90a
 - https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
 - Dockerize all-sorts: https://docs.docker.com/samples/
@@ -138,10 +137,10 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 
 # Kubernetes:
 
-![](/Illustrations/k8.png)
-
-- https://www.youtube.com/watch?v=7bA0gTroJjw
+- https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
+- https://www.youtube.com/watch?v=7bA0gTroJjw <sup>Good longer intro</sup>
 - https://www.youtube.com/watch?v=X48VuDVv0do
+- https://www.youtube.com/watch?v=1xo-0gCVhTU
 - https://www.tutorialspoint.com/kubernetes/index.htm
 
 ## Swarms vs Kubernetes
