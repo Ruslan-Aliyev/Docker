@@ -1,7 +1,6 @@
 # Tutorials
 
 - https://youtube.com/playlist?list=PLCakfctNSHkGYdA82WDUKF3WGyONpGiEw
-- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC
 - https://www.youtube.com/playlist?list=PL16WqdAj66SBSLZ2-TrZ5q_39UhtKyL9U
 - LearnCode.academy https://www.youtube.com/playlist?list=PLoYCgNOIyGAAzevEST2qm2Xbe3aeLFvLc
 - Automation Step by Step - Raghav Pal https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK
@@ -140,8 +139,6 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 - https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
 - https://www.youtube.com/watch?v=7bA0gTroJjw <sup>Good longer intro</sup>
 - https://www.youtube.com/watch?v=l7gC4SgW7DU <sup>Good installation tutorial</sup>
-- https://www.youtube.com/watch?v=PH-2FfFD2PU <sup>Intro</sup>
-- https://www.youtube.com/watch?v=8C_SCDbUJTg <sup>Intro</sup>
 - https://www.youtube.com/watch?v=UWg3ORRRF60
 - https://www.youtube.com/watch?v=X48VuDVv0do
 - https://www.youtube.com/playlist?list=PLMPZQTftRCS8Pp4wiiUruly5ODScvAwcQ
