@@ -117,10 +117,9 @@ USER appuser
     ```
     - https://stackoverflow.com/questions/56844746/how-to-set-uid-and-gid-in-docker-compose  
 
-- https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Docker%20Tips_%20Running%20a%20Container%20With%20a%20Non%20Root%20User%20_%20by%20Luc%20Juggery%20_%20Better%20Programming.pdf
-- https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Processes%20In%20Containers%20Should%20Not%20Run%20As%20Root%20_%20by%20Marc%20Campbell%20_%20Medium.pdf
+- https://github.com/Ruslan-Aliyev/Docker#root-priviledge-issue
 
-## Misc notes
+### Misc notes
 
 - Docker-Compose Container Name vs Image: 
   - https://docs.docker.com/compose/compose-file/compose-file-v3/#container_name 
@@ -404,7 +403,7 @@ COPY --chown=www-data --from=npm-build /var/www/html/public/ /var/www/html/publi
 COPY --chown=www-data . /var/www/html
 ```
 
-Another tutorial: https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Using%20Docker%20to%20Run%20a%20Simple%20Nginx%20Server%20_%20by%20Aditya%20Purwa%20_%20Myriatek%20_%20Medium.pdf
+https://github.com/Ruslan-Aliyev/Docker#dockerize-nginx
 
 ### Debug docker build error:  
 
