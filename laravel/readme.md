@@ -61,6 +61,19 @@ npm run dev
 php artisan serve
 ```
 
+Production
+```
+docker build -t atabegruslan/docker4laravel-php:0.0.1 -f ./docker/php_prod.Dockerfile .
+docker build -t atabegruslan/docker4laravel-nginx:0.0.1 -f ./docker/nginx_prod.Dockerfile .
+
+# Push to DockerHub:
+docker login --username=atabegruslan
+docker push atabegruslan/docker4laravel-php:0.0.1
+docker push atabegruslan/docker4laravel-nginx:0.0.1
+
+docker-compose up -d --build
+```
+
 Notes:
 - `docker-compose run —rm` starts new container then deletes it once composer finishes running that command.
 - `docker-compose exec` runs command inside an existing container.
