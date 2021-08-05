@@ -1,8 +1,10 @@
-# Very good tutorial's notes
+# Very good tutorials' notes
 
-https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm
+https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm <sup>Very Good</sup>
 
 ## Tutorial 1 - Install Laravel from a composer container
+
+- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm Episode 1
 
 ### Basic
 
@@ -42,9 +44,13 @@ As seen in https://github.com/composer/docker/blob/master/1.10/Dockerfile#L40 , 
 
 ## Tutorial 2 - Locally, with `docker-compose`
 
-https://github.com/tonysm/dockerforlaravel-app
+- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm Episode 2
+  - https://github.com/tonysm/dockerforlaravel-app
 
-Dockerfile explained
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC Episode 1-3
+  - https://github.com/aschmelyun/docker-compose-laravel
+
+### Dockerfile explained
 
 ```
 FROM php:7.4-fpm 
@@ -79,6 +85,8 @@ RUN apt-get update \
 - Copy this binary: `/usr/bin/composer` from this composer image: https://hub.docker.com/_/composer to this place in our container: `/usr/bin/`
 - https://dev.to/jonesrussell/install-composer-in-custom-docker-image-3f71
 
+#### User and permissions:
+
 ```
 RUN groupadd --gid 1000 appuser \
   && useradd --uid 1000 -g appuser \
@@ -109,13 +117,162 @@ USER appuser
     ```
     - https://stackoverflow.com/questions/56844746/how-to-set-uid-and-gid-in-docker-compose  
 
-Rest of the major changes:
+- https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Docker%20Tips_%20Running%20a%20Container%20With%20a%20Non%20Root%20User%20_%20by%20Luc%20Juggery%20_%20Better%20Programming.pdf
+- https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Processes%20In%20Containers%20Should%20Not%20Run%20As%20Root%20_%20by%20Marc%20Campbell%20_%20Medium.pdf
+
+## Misc notes
+
+- Docker-Compose Container Name vs Image: 
+  - https://docs.docker.com/compose/compose-file/compose-file-v3/#container_name 
+    - > Use the command `docker exec -it <container name> /bin/bash` to get a bash shell in the container. Or directly use `docker exec -it <container name> <command>` to execute whatever command you specify in the container.
+    - The container name you define in `docker-compose.yaml` `container_name: xxx` is the name you can later use to get into the container `docker exec -it xxx`
+    - The tag name that you build images with `docker build -t yyy .` is the name you'll refer to in `docker-compose.yaml` `image: yyy`
+  - https://docs.docker.com/compose/compose-file/compose-file-v3/#image
+    - > If the image does not exist, Compose attempts to pull it, unless you have also specified build, in which case it builds it using the specified options and tags it with the specified tag.
+- Docker-Compose Entrypoint: https://docs.docker.com/compose/compose-file/compose-file-v3/#entrypoint
+- Docker-Compose Alias: https://gist.github.com/mborodov/cb95fc4e355d28ea9660b432eac7c4d8
+
+### Rest of the major changes:
 
 https://github.com/Ruslan-Aliyev/Docker/blob/master/Illustrations/IMPROVE_docker_laravel_commit.pdf
 
+## Tutorial 2.5 (i) - Networks
+
+### Networks
+
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC Episode 2
+- https://docs.docker.com/compose/networking/#specify-custom-networks
+  - > By default Compose sets up a single network for your app. Each container for a service joins the default network and is both reachable by other containers on that network, and discoverable by them at a hostname identical to the container name.
+  - Unless you make your own custom network:
+    ```
+    version: "3"
+
+    services:
+      aaa:
+        ...
+        networks:
+          - nnn
+      bbb:
+        ...
+        networks:
+          - nnn
+
+    networks:
+      nnn:
+    ```
+
+### Multiple apps
+
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC Episode 4
+  - Different names and ports (`container_name: name_unique` & `ports: -"{unique_port_number}:80"` in `docker-compose.yml`)
+    - `.env`'s database credentials can be the same, because each project's docker network is isolated (Even when the custom defined network name is the same).
+  - Frontend and Backend comminucation
+    1. First things first, it's best to use Laravel 7+'s https://laravel.com/api/8.x/Illuminate/Support/Facades/Http.html (though it still needs `composer install guzzlehttp/guzzle`)
+    2. Your local machine has access to both frontend and backend apps, but those apps in their respective docker container networks are isolated from eachother. So we need to use a **Docker Bridge Network**: https://docs.docker.com/network/bridge/
+    3. For the backend app's `docker-compose`:
+      ```
+      version: "3"
+
+      services:
+        aaa:
+          ...
+          networks:
+            - nnn
+            - app-shared
+        bbb:
+          ...
+          networks:
+            - nnn
+            - app-shared
+
+      networks:
+        nnn:
+        app-shared:
+          driver: bridge
+      ```
+    4. Run `docker-compose up -d --build` on the backend app to get the name of the bridge network `Creating network "xxx" with driver "bridge"`
+    5. For the frontend app's `docker-compose`:
+      ```
+      version: "3"
+
+      services:
+        aaa:
+          ...
+          networks:
+            - nnn
+            - xxx
+        bbb:
+          ...
+          networks:
+            - nnn
+            - xxx
+
+      networks:
+        nnn:
+        xxx:
+          external: true
+      ```
+
+## Tutorial 2.5 (ii) - Cron
+
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC Episode 6
+  - https://github.com/aschmelyun/laravel-scheduled-tasks-docker
+
+### Normally in local Linux
+
+`crontab –e` and paste https://laravel.com/docs/8.x/scheduling#running-the-scheduler
+
+### In Docker php fpm alpine
+
+Paste https://laravel.com/docs/8.x/scheduling#running-the-scheduler into a new `crontab` file then in `Dockerfile`: `COPY ./crontab /etc/crontabs/root`. Then run `docker-compose exec -d {The php fpm alpine service} crond -f`.
+
+To stop the cron: Run `docker-compose exec {The php fpm alpine service} ps aux` to get process list, then run `docker-compose exec {The php fpm alpine service} kill {process number}`
+
+### Via a cron docker service
+
+`docker-compose.yml`
+```
+version: '3'
+
+services:
+
+  ...
+
+  cron:
+    build:
+      context: .
+      dockerfile: cron.dockerfile
+    volumes:
+      - ./:/var/www/html
+```
+
+`cron.dockerfile`
+```
+FROM php:7.4-fpm-alpine
+
+RUN docker-php-ext-install pdo pdo_mysql
+
+COPY crontab /etc/crontabs/root
+
+CMD ["crond", "-f"]
+```
+
+`docker-compose up -d cron`
+
+Or better: 
+
+Change `/dev/null` to `/dev/stdout` in crontab file ( https://laravel.com/docs/8.x/scheduling#running-the-scheduler ), then run `docker-compose up cron`. This way you will see cron's output in the console.
+
 ## Tutorial 3 - To Production
 
-In production
+- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm Episode 3
+  - https://github.com/tonysm/dockerforlaravel-app
+
+- https://www.youtube.com/playlist?list=PL36CGZHZJqsWXjf4GeQBLUl7CK1dodKuC Episode 5
+  - https://github.com/aschmelyun/docker-compose-laravel
+
+### Differences in production
+
 - Better not to map volumes, so the image should have everything it need within it (except some private things)
 - Change build steps for dependencies
 - Better to use https://hub.docker.com/_/php 's `$PHP_INI_DIR/php.ini-production`, which in turn needs OPcache for custom configs.
@@ -124,8 +281,19 @@ In production
   - OPcache config detailed guide: https://tideways.com/profiler/blog/fine-tune-your-opcache-configuration-to-avoid-caching-suprises
 - Make custom nginx image
 - Have built images pushed to DockerHub
+- Stick with default ports, eg: use port 80 for http, don't use 8080, 8000, etc...
+- More un-guessable passwords
+- Setup server
+  - Add a non-root user with sudo priviledges on Server `useradd laravel`, `usermod -aG sudo laravel`
+  - Create the directory on server where our website will reside
+  - Setup firewall to close off all unused ports
+  - Upload files to server
+    1. `rsync -avzh --exclude={"/node_modules/*","/vendor/*"} . {username}@{ip address}:/{directory}` (flags: a means all files, v means verbose, z means compressed while uploading, h means display any binaries in human-readable format) https://en.wikipedia.org/wiki/Rsync
+    2. Via Repo
+  - Have Docker setup on Server: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
-Dockerfile explained
+### Dockerfile explained
+
 ```
 # Composer dependencies.
 FROM composer AS composer-build
@@ -196,11 +364,13 @@ RUN composer dump -o && composer check-platform-reqs
 - Get Composer, copy all the files into the image, then perform composer autoload-dump
 - https://nickjanetakis.com/blog/docker-tip-2-the-difference-between-copy-and-add-in-a-dockerile
 
-This is a multi-stage dockerfile. 
+#### This is a multi-stage dockerfile
+
 - https://askinglot.com/what-is-multistage-dockerfile
 - https://docs.docker.com/develop/develop-images/multistage-build/
 
-Custom nginx docker file explained:
+### Custom nginx Dockerfile explained
+
 ```
 # NPM dependencies.
 FROM node:12 AS npm-build
@@ -234,6 +404,95 @@ COPY --chown=www-data --from=npm-build /var/www/html/public/ /var/www/html/publi
 COPY --chown=www-data . /var/www/html
 ```
 
-Debug docker build error:  
+Another tutorial: https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/Using%20Docker%20to%20Run%20a%20Simple%20Nginx%20Server%20_%20by%20Aditya%20Purwa%20_%20Myriatek%20_%20Medium.pdf
+
+### Debug docker build error:  
+
 The logs would have a hash associated with each build step.  
 So you can go into the container and run commands to debug at the container's state just before error happened: `docker rum --rm -it {hash} bash`
+
+### Rest of the major changes:
+
+https://github.com/Ruslan-Aliyev/Docker/blob/master/Illustrations/to_production_commit.pdf
+
+## Tutorial 4 - Multiple nodes
+
+### Preliminaries
+
+- https://www.youtube.com/watch?v=bU2NNFJ-UXA <sup>Multiple VMs as nodes. Starting from Step 1 below</sup>
+  - https://automationstepbystep.com/
+  - https://www.youtube.com/playlist?list=PLhW3qG5bs-L99pQsZ74f-LC-tOEsBp2rK
+  - https://rominirani.com/docker-swarm-tutorial-b67470cf8872
+    - https://medium0.com/m/global-identity?redirectUrl=https%3A%2F%2Frominirani.com%2Fdocker-swarm-tutorial-b67470cf8872
+
+- https://www.youtube.com/watch?v=3-7gZS4ePak <sup>1 machine as both master and worker. Starting from Step 4 below</sup>
+  - https://takacsmark.com/docker-swarm-tutorial-for-beginners/
+
+- https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/How%20To%20Differentiate%20Between%20Docker%20Images%2C%20Containers%2C%20Stacks%2C%20Machine%2C%20Nodes%20and%20Swarms%20_%20by%20Pei%20Seng%20Tan%20_%20Better%20Programming.pdf <sup>Terminologies</sup>
+
+#### Pre-requisites
+
+1. Docker 1.13 or higher
+2. Install Docker Machine
+  - https://docs.docker.com/machine/install-machine/#installing-machine-directly
+  - https://docs.docker.com/get-started/swarm-deploy/
+
+#### Steps
+
+1. Create 1 manager node and worker nodes: 
+  ```
+  docker-machine create --driver virtualbox manager1
+  docker-machine create --driver virtualbox worker1
+  docker-machine create --driver virtualbox worker2
+  ```
+
+2. Check machine created successfully
+  ```
+  docker-machine ls
+  docker-machine ip manager1
+  ```
+
+3. SSH into docker machine: `docker-machine ssh manager1`
+
+4. Initialize Docker Swarm: `docker swarm init --advertise-addr {MANAGER_IP}`. You will get the "join-token". Even simpler, `docker swarm init` will create a swarm, a master and a join-token. 
+
+5. Let 1 node join the swarm as master by SSH into designated master node and run: `docker swarm {join-token} manager`. 
+  - To see all nodes in its swarm: `docker node ls`
+  - See swarm info: `docker info`, especially the "Swarm" section
+  - See available command options: `docker swarm `
+
+6. Let the other nodes join the swarm as workers by SSH into them and run: `docker swarm join --token {join-token} {ip address}:{port}`
+
+7. Run containers on Docker Swarm. Run on master: `docker service create --replicas {number} -p 80:80 --name {service name} {image name}`. **Or** if you already have `docker-compose.yml`, then run `docker stack deploy -c docker-compose.yml {stack name}` (the swarm equivalent of `docker-compose`). To check status:
+  - On master: `docker service ls`
+  - On master: `docker service ps {service name}`
+  - Check the service running on all nodes
+  - Check on the browser by giving ip for all nodes
+  - See the Stacks deployed to Swarm: `docker stack ls`
+  - See the services of a Stack: `docker stack services ls`
+
+8. Scale service up and down. On manager node: `docker service scale {service name}={another number}`. To inspect nodes, on manager node:
+  - `docker node inspect {nodename}`
+  - `docker node inspect self`
+
+9. Shutdown node: `docker node update --availability drain {nodename}`
+
+10. Update service: `docker service update --image {image name}:{version} {service name}`
+
+11. Remove service: `docker service rm {service name}`
+
+12. Leave the swarm
+  ```
+  docker-machine stop {machine name} # stop machine
+  docker-machine rm machine name     # remove machine
+  ```
+
+- https://www.youtube.com/watch?v=l7gC4SgW7DU <sup>Good for learning K8</sup>
+
+### K8
+
+- https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm Episode 4+
+  - https://github.com/tonysm/dockerforlaravel-app
+  - https://github.com/tonysm/dockerforlaravel-k8s-files
+    - https://github.com/tonysm/dockerforlaravel-app/blob/master/.github/workflows/ci.yml
+      - https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages
