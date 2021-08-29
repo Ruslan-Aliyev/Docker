@@ -70,7 +70,9 @@
 
 ![](/Illustrations/docker.png)
 
-- WSL: https://www.youtube.com/watch?v=-atblwgc63E
+- WSL: 
+	- https://www.youtube.com/watch?v=-atblwgc63E
+	- https://docs.docker.com/desktop/windows/wsl/
 
 # Install:
 
