@@ -416,7 +416,9 @@ https://github.com/Ruslan-Aliyev/Docker/blob/master/Illustrations/to_production_
 
 ## Tutorial 4 - Multiple nodes
 
-### Preliminaries
+### Swarms
+
+**Preliminaries**
 
 - https://www.youtube.com/watch?v=bU2NNFJ-UXA <sup>Multiple VMs as nodes. Starting from Step 1 below</sup>
   - https://automationstepbystep.com/
@@ -429,14 +431,14 @@ https://github.com/Ruslan-Aliyev/Docker/blob/master/Illustrations/to_production_
 
 - https://github.com/Ruslan-Aliyev/Docker/blob/master/other_helpful_articles/How%20To%20Differentiate%20Between%20Docker%20Images%2C%20Containers%2C%20Stacks%2C%20Machine%2C%20Nodes%20and%20Swarms%20_%20by%20Pei%20Seng%20Tan%20_%20Better%20Programming.pdf <sup>Terminologies</sup>
 
-#### Pre-requisites
+**Pre-requisites**
 
 1. Docker 1.13 or higher
 2. Install Docker Machine
   - https://docs.docker.com/machine/install-machine/#installing-machine-directly
   - https://docs.docker.com/get-started/swarm-deploy/
 
-#### Steps
+**Steps**
 
 1. Create 1 manager node and worker nodes: 
   ```
@@ -486,12 +488,37 @@ https://github.com/Ruslan-Aliyev/Docker/blob/master/Illustrations/to_production_
   docker-machine rm machine name     # remove machine
   ```
 
-- https://www.youtube.com/watch?v=l7gC4SgW7DU <sup>Good for learning K8</sup>
+### Kubernetes with KubeAdm (Plain Setup)
 
-### K8
+- https://www.youtube.com/watch?v=l7gC4SgW7DU&t=498s
+
+### Kubernetes (Setup on Digital Ocean)
 
 - https://www.youtube.com/playlist?list=PL1LQwTE3lBhSnaL7j90AUJyvC9mFCKhZm Episode 4+
   - https://github.com/tonysm/dockerforlaravel-app
   - https://github.com/tonysm/dockerforlaravel-k8s-files
-    - https://github.com/tonysm/dockerforlaravel-app/blob/master/.github/workflows/ci.yml
-      - https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages
+
+## Tutorial 8 - CI
+
+### GitHub to DockerHub
+
+- Method 1 Tutorial: https://github.com/tonysm/dockerforlaravel-app/blob/master/.github/workflows/docker-images.yml
+  - ( https://github.com/elgohr/Publish-Docker-Github-Action )
+- Method 2 Tutorial: https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-docker-hub
+- My successful try: https://github.com/Ruslan-Aliyev/docker-ci-test
+
+Setup Secrets
+
+![](/Illustrations/ci/secrets.png)
+
+Method 1
+
+![](/Illustrations/ci/method1_ci.png)
+
+![](/Illustrations/ci/method1_result.png)
+
+Method 2
+
+![](/Illustrations/ci/method2_ci.png)
+
+![](/Illustrations/ci/method2_result.png)

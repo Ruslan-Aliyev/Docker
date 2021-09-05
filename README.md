@@ -159,4 +159,8 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 ## Swarms vs Kubernetes
 - https://www.youtube.com/watch?v=9_s3h_GVzZc
 
+# Other Alternatives
+
+- https://www.clickittech.com/devops/kubernetes-alternatives/
+- https://www.aquasec.com/cloud-native-academy/kubernetes-101/kubernetes-alternatives/
 
