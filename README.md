@@ -73,6 +73,8 @@
 - WSL: 
 	- https://www.youtube.com/watch?v=-atblwgc63E
 	- https://docs.docker.com/desktop/windows/wsl/
+	- https://docs.docker.com/desktop/windows/install/
+	- https://docs.microsoft.com/en-us/windows/wsl/install#step-4---download-the-linux-kernel-update-package
 
 # Install:
 
