@@ -112,6 +112,10 @@ ${user} sudo service docker restart
 # OR reboot physically
 ```
 
+# Common Q&A
+
+- https://markpatton.cloud/2020/08/12/error-when-running-docker-on-windows-after-install-fixed/ 
+
 ---
 
 # Setup web server:
