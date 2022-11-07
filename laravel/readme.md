@@ -110,15 +110,19 @@ True
 
 - https://webomnizz.com/containerize-your-laravel-application-with-docker-compose/amp/ <sup>Intro</sup>
 - https://github.com/Ruslan-Aliyev/Docker/blob/master/laravel/good_notes.md <sup>Very Good</sup>
+- https://help.clouding.io/hc/en-us/articles/360010679999-How-to-Deploy-Laravel-with-Docker-on-Ubuntu-18-04
 - https://www.youtube.com/watch?v=2exXt7XLPBQ
 - https://www.youtube.com/watch?v=Ip2btxIUdNw
 - https://github.com/othyn/docker-compose-laravel/
 - LaraDock: 
 	- https://www.youtube.com/playlist?list=PLWvvi-jFYHUjfMprLCYA1ubflsirxKrVg
 	- https://github.com/LaraDock/
+	- https://github.com/laradock/laradock
+	- https://laradock.io/
 
 # Sail
 
+- https://laravel-news.com/laravel-sail
 - https://www.youtube.com/watch?v=PDaGJ397Ing
 - https://www.youtube.com/watch?v=5VxLX3aVs-E
 - https://www.youtube.com/watch?v=4K4nkncZ2OQ
