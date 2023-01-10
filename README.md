@@ -68,13 +68,33 @@
 
 # Architecture:
 
+https://www.opc-router.com/what-is-docker
+
 ![](/Illustrations/docker.png)
+
+**Docker Engine** is the underlying client-server technology that builds and runs containers using Docker's components and services. 
+
+When people refer to Docker, they mean either 
+- Docker Engine
+	- which comprises the Docker daemon, a REST API 
+	- and the CLI that talks to the Docker daemon through the API 
+- or the company Docker Inc., which offers various editions of containerization technology around Docker Engine.
+
+Docker Engine vs. **Docker Machine**
+
+- Docker Engine was initially developed for Linux systems, but with version updates extended to operate natively on both Windows and Apple OSes. 
+- Docker Machine is a tool to install and manage Docker Engine on several virtual hosts or older versions of Apple and Windows OSes. Commands input through Docker Machine, installed on the local system, will not only create virtual hosts, but also install Docker and configure its clients.
+
+While Docker Engine now runs natively on Windows and Apple, Docker Machine can still be used to manage virtual hosts on both OSes and Linux, or on company networks, in data centers or on cloud providers such as Amazon Web Services, Microsoft Azure and Digital Ocean.
+
+https://www.techtarget.com/searchitoperations/definition/Docker-Engine
 
 - WSL: 
 	- https://www.youtube.com/watch?v=-atblwgc63E
 	- https://docs.docker.com/desktop/windows/wsl/
 	- https://docs.docker.com/desktop/windows/install/
 	- https://docs.microsoft.com/en-us/windows/wsl/install#step-4---download-the-linux-kernel-update-package
+	- https://ubuntu.com/wsl (Can be installed from MS Store)
 
 # Install:
 
@@ -170,3 +190,8 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 - https://www.clickittech.com/devops/kubernetes-alternatives/
 - https://www.aquasec.com/cloud-native-academy/kubernetes-101/kubernetes-alternatives/
 
+# Other tools and knowhow
+
+- Vulnerability Scanning: https://snyk.io/docker
+- https://superuser.com/questions/1131874/how-to-access-localhost-of-linux-subsystem-from-windows
+- https://www.digitalocean.com/community/tutorials/how-to-configure-the-linux-firewall-for-docker-swarm-on-ubuntu-16-04
