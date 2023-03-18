@@ -96,6 +96,8 @@ https://www.techtarget.com/searchitoperations/definition/Docker-Engine
 	- https://docs.microsoft.com/en-us/windows/wsl/install#step-4---download-the-linux-kernel-update-package
 	- https://ubuntu.com/wsl (Can be installed from MS Store)
 
+**containerd** is the core container runtime of the **Docker Engine**. It leverages **runc** (runtime code).
+
 # Install:
 
 Check Ubuntu version first: `lsb_release -a`
