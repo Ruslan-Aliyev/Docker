@@ -174,14 +174,17 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 
 # Kubernetes:
 
-- https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
-- https://www.youtube.com/watch?v=7bA0gTroJjw <sup>Good longer intro</sup>
-- https://www.youtube.com/watch?v=l7gC4SgW7DU <sup>Good installation tutorial</sup>
 - https://www.youtube.com/playlist?list=PLhW3qG5bs-L8EU_Oocu6RkNPpYpaamtXX <sup>V Good beginner tutorial</sup>
 - https://www.youtube.com/watch?v=X48VuDVv0do <sup>V Good beginner tutorial - full</sup>
 - https://www.youtube.com/watch?v=s_o8dwzRlu4 <sup>V Good beginner tutorial - new crash course</sup>
+
+-[](/Illustrations/K8.png)
+
+Others:
+- https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
+- https://www.youtube.com/watch?v=7bA0gTroJjw <sup>Good longer intro</sup>
+- https://www.youtube.com/watch?v=l7gC4SgW7DU <sup>Good installation tutorial</sup>
 - https://www.youtube.com/watch?v=UWg3ORRRF60
-- https://www.youtube.com/watch?v=X48VuDVv0do
 - https://www.youtube.com/playlist?list=PLMPZQTftRCS8Pp4wiiUruly5ODScvAwcQ
 - https://www.youtube.com/watch?v=1xo-0gCVhTU
 - https://www.tutorialspoint.com/kubernetes/index.htm
