@@ -178,7 +178,7 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 - https://www.youtube.com/watch?v=X48VuDVv0do <sup>V Good beginner tutorial - full</sup>
 - https://www.youtube.com/watch?v=s_o8dwzRlu4 <sup>V Good beginner tutorial - new crash course</sup>
 
--[](/Illustrations/K8.png)
+![](/Illustrations/K8.png)
 
 Others:
 - https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
