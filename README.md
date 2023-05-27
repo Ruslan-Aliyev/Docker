@@ -180,6 +180,21 @@ https://github.com/atabegruslan/Others/blob/master/Server/setup_webserver.md#set
 
 ![](/Illustrations/K8.png)
 
+Features:
+- Auto bin packing: allocating a node's resources to jobs
+- Service discovery and load balancing
+- Storage orchestration
+- Self-healing
+- Auto rollout and rollback
+- Secret and config-map management
+- Batch execution
+- Horizontal scaling: **Replication controller** controls the number of pods depending on auto-detected CPU usage or user inputs/config settings. It reads from the **manifest file**. It is affected by the **horizontal pod auto-scaler**.
+
+Components:
+- Ingress
+- Config map
+- Volumes
+
 Others:
 - https://www.youtube.com/watch?v=QJ4fODH6DXI <sup>Good short intro</sup>
 - https://www.youtube.com/watch?v=7bA0gTroJjw <sup>Good longer intro</sup>
